@@ -50,3 +50,19 @@
 //   let mixed = b.slice(0, 2) + a.slice(2) + " " + a.slice(0, 2) + b.slice(2);
 //   console.log(mixed);
 // }
+
+//----------------------------------------------------------------------------------------------
+// Exercise 7
+
+function verbing(str) {
+  if (str.length >= 3 && str.slice(str.length - 3, str.length) !== "ing") {
+    str += "ing";
+    console.log(str);
+  } else if (
+    str.length >= 3 &&
+    str.slice(str.length - 3, str.length) == "ing"
+  ) {
+    str += "ly";
+    console.log(str);
+  } else if (str.length < 3) console.log(str);
+}
