@@ -54,15 +54,26 @@
 //----------------------------------------------------------------------------------------------
 // Exercise 7
 
-function verbing(str) {
-  if (str.length >= 3 && str.slice(str.length - 3, str.length) !== "ing") {
-    str += "ing";
-    console.log(str);
-  } else if (
-    str.length >= 3 &&
-    str.slice(str.length - 3, str.length) == "ing"
-  ) {
-    str += "ly";
-    console.log(str);
-  } else if (str.length < 3) console.log(str);
+// function verbing(str) {
+//   if (str.length >= 3 && str.slice(str.length - 3, str.length) !== "ing") {
+//     str += "ing";
+//     console.log(str);
+//   } else if (
+//     str.length >= 3 &&
+//     str.slice(str.length - 3, str.length) == "ing"
+//   ) {
+//     str += "ly";
+//     console.log(str);
+//   } else if (str.length < 3) console.log(str);
+// }
+
+//----------------------------------------------------------------------------------------------
+// Exercise 8
+
+function notBad(str) {
+  let strNew = str;
+  if (strNew.includes("not") && strNew.includes("bad")) {
+    strNew = strNew.slice(0, strNew.indexOf("not")) + "good!";
+    console.log(strNew);
+  } else console.log(str);
 }
